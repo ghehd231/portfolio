@@ -1,7 +1,15 @@
 import React from 'react';
-
+import CertificationSection from "../components/about/certification/CertificationSection";
+import ExperienceSection from "../components/about/experience/ExperienceSection";
+import Head from "../components/about/Head";
+import Bottom from "../components/common/Bottom";
 const About = () => {
-  return <div>about</div>;
+  return (<>
+  <Head />
+  <ExperienceSection />
+  <CertificationSection />
+  <Bottom />
+</>);
 };
 
 export default About;

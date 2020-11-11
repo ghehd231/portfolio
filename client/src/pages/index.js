@@ -1,8 +1,10 @@
 import withSplitting from '../withSplitting';
 
-export const Main = withSplitting(() => import('../components/Main'));
-export const Project = withSplitting(() => import('../components/Project'));
-export const Skill = withSplitting(() => import('../components/Skill'));
+export const MainSection = withSplitting(() => import('../components/home/main/MainSection'));
+export const ProjectSection = withSplitting(() =>
+  import('../components/home/project/ProjectSection'),
+);
+export const SkillSection = withSplitting(() => import('../components/home/skill/SkillSection'));
 
 export const Home = withSplitting(() => import('./Home'));
 export const Detail = withSplitting(() => import('./Detail'));

@@ -1,11 +1,13 @@
 import React from 'react';
-import {Main, Project, Skill} from '../pages'
+import {MainSection, ProjectSection, SkillSection} from '.'
+import Bottom from '../components/common/Bottom';
 const Home = () => {
   return (
   <>
-    <Main/>
-    <Project/>
-    <Skill/>
+    <MainSection/>
+    <ProjectSection/>
+    <SkillSection/>
+    <Bottom/>
   </>
   );
 };
