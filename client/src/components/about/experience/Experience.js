@@ -1,26 +1,52 @@
 import React from 'react';
-import Section from '../../common/Section';
-import Experience from './Experience';
-
-const ExperienceSection = () => {
-  return <Section title="Experience" sub vertical component={Experience} content={experiences} />;
+import styled from 'styled-components';
+import palette from '../../../lib/styles/palette';
+const Experience = ({ item }) => {
+  return (
+    <ExperienceItem>
+      <img src={`../images/company/${item.thumbnail}.png`} alt="experience logo" />
+      <MetaBox>
+        <MataTitle>
+          {item.title}
+        </MataTitle>
+        <MetaDesc>
+          {item.desc}
+        </MetaDesc>
+        <MetaDesc>
+          {item.date}
+        </MetaDesc>
+      </MetaBox>
+    </ExperienceItem>
+  );
 };
 
-const experiences = [
-  {
-    id: 1,
-    title: '웹개발팀',
-    desc: 'HTML, CSS, Javascript, JQuery, PHP, MySQL, MariaDB, AWS',
-    thumbnail: 'codberg',
-    date: '2019.04 - 2020.07',
-  },
-  {
-    id: 2,
-    title: '빅데이터를 활용한 응용프로그래머 개발자 양성 과정',
-    desc: 'JAVA, JSP, Spring, MySQL, Oracle, ibatis, mybatis, R',
-    thumbnail: 'academy',
-    date: '2018.09 - 2019.02',
-  },
-];
+const ExperienceItem = styled.div`
+  display: flex;
+  align-items: center;
+  & > img {
+    width: 5rem;
+    margin-right: 1rem;
+  }
+  & + & {
+    margin-top: 1rem;
+  }
+`;
 
-export default ExperienceSection;
+const MetaBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: ${palette.white};
+`;
+const MataTitle = styled.p`
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+`;
+const MetaDesc = styled.p`
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0;
+  color: ${palette.text_gray};
+`;
+
+export default Experience;

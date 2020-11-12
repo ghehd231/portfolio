@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 import BgSection from '../common/BgSection';
 import Button from '../common/Button';
-import { FaBars, FaGithub, FaVimeo } from 'react-icons/fa';
+import { FaBars, FaGithub } from 'react-icons/fa';
 
 const Head = () => {
   return (
@@ -48,20 +48,14 @@ const links = [
   {
     id: 1,
     name: 'Resume',
-    path: 'https://www.notion.so/yoonvelop/Hyebin-Yoon-c06bf6b603034b38872610b1e4b4c5c0',
+    path: 'https://www.notion.so/ghehd231/Hello-world-cc9096d09e024843a0db40f584e7b7b7',
     icon: <FaBars />,
   },
   {
     id: 2,
     name: 'Github',
-    path: 'https://github.com/yoonvelop',
+    path: 'https://github.com/ghehd231',
     icon: <FaGithub />,
-  },
-  {
-    id: 3,
-    name: 'Velog',
-    path: 'https://velog.io/@yoonvelop',
-    icon: <FaVimeo />,
   },
 ];
 export default Head;

@@ -10,16 +10,23 @@ const experiences = [
   {
     id: 1,
     title: '웹개발팀',
-    desc: 'HTML, CSS, Javascript, JQuery, PHP, MySQL, MariaDB, AWS',
-    thumbnail: 'codberg',
-    date: '2019.04 - 2020.07',
+    desc: 'HTML, CSS, Javascript, JQuery, ASP, MSSQL',
+    thumbnail: 'ellen',
+    date: '2018.02 - 2019.12',
   },
   {
     id: 2,
-    title: '빅데이터를 활용한 응용프로그래머 개발자 양성 과정',
-    desc: 'JAVA, JSP, Spring, MySQL, Oracle, ibatis, mybatis, R',
-    thumbnail: 'academy',
-    date: '2018.09 - 2019.02',
+    title: 'FastCampus React로 구현하는 웹 어플리케이션 제작 오프라인 강의',
+    desc: 'React, Prettier, ESLint, Redux, Redux-middleware, TypeScript 기초, code-splitting',
+    thumbnail: 'fastcampus',
+    date: '2019.01 - 2019.03',
+  },
+  {
+    id: 3,
+    title: '우아한테크 러닝3기 (React&TypeScript)',
+    desc: 'Javascript, React, TypesScript, Redux',
+    thumbnail: 'wooahan',
+    data: '2020.09 - 2020.10',
   },
 ];
 
