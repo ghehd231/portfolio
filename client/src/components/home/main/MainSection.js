@@ -25,7 +25,7 @@ const MainSection = () => {
     //     </GradientBox>
     //   </MainBolok>
     // </>
-    <BgSection bgName="main-bg4">
+    <BgSection bgName="main-gif">
       <div>
         <Desc>Front-end developer</Desc>
         <Title>

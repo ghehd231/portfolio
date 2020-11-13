@@ -5,18 +5,6 @@ import Button from './Button';
 import List from './List';
 const Section = ({ title, categories, sub, vertical, component: Component, content }) => {
   return (
-    // <SectionBlock>
-    //   <SectionTitleBox>
-    //     <Title>
-    //       {title}
-    //     </Title>
-    //     {categories &&
-    //       <Categories>
-    //         {categories.map(category => <Category key={category.id} category={category} />)}
-    //       </Categories>}
-    //   </SectionTitleBox>
-    //   <Component />
-    // </SectionBlock>
     <SectionWrap>
       <SectionBlock sub={sub}>
         <SectionTitleBox sub={sub}>
@@ -49,6 +37,7 @@ const SectionWrap = styled.section`
   z-index: 100;
 `;
 const SectionBlock = styled.section`
+  position: relative;
   padding: 3rem 1rem;
   max-width: 70rem;
   width: 100%;

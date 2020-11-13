@@ -38,7 +38,7 @@ const ImgBox = styled.div`
   background: ${palette.white};
   margin-bottom: 0.7rem;
   & > img {
-    width: 10rem;
+    width: 8rem;
   }
 `;
 

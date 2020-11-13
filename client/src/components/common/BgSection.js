@@ -19,7 +19,7 @@ const Bg = styled.div`
   position: fixed;
   ${(props) =>
     css`
-      background: url("../images/${props.bgName}.jpg");
+      background: url("../images/${props.bgName}.${props.bgName.indexOf('gif')>0 ? "gif" : "jpg" }");
     `}
   background-size: cover;
   background-position: center;
@@ -32,6 +32,20 @@ const MainBolok = styled.section`
   position: relative;
 `;
 
+const GradientBox = styled.div`
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  height: 15rem;
+  align-items: center;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 1) 8.98%,
+    rgba(0, 0, 0, 0) 100%
+  );
+`;
 const MainWrap = styled.div`
   width: 100%;
   max-width: 70rem;
@@ -43,21 +57,5 @@ const MainWrap = styled.div`
   align-items: center;
 `;
 
-const GradientBox = styled.div`
-  width: 100%;
-  display: flex;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 0;
-  height: 15rem;
-  align-items: center;
-  background: linear-gradient(
-    360deg,
-    rgba(0, 0, 0, 1) 8.98%,
-    rgba(0, 0, 0, 0) 100%
-  );
-`;
 
 export default BgSection;

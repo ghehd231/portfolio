@@ -6,14 +6,13 @@ import {
   SiCss3,
   SiJavascript,
   SiJquery,
-  SiPhp,
   SiReact,
   SiNodeDotJs,
   SiAmazon,
-  SiMysql,
   SiMongodb,
   SiGit,
 } from 'react-icons/si';
+import { FaDatabase } from 'react-icons/fa';
 const SkillSection = () => {
   return <Section title="Skills" component={Skill} content={skills} />;
 };
@@ -61,18 +60,8 @@ const skills = [
     name: 'JQuery',
     level: 4,
   },
-
   {
     id: 6,
-    icon: <SiPhp />,
-    color: '#787BB3',
-    category: 'Back-end',
-    name: 'PHP',
-
-    level: 4,
-  },
-  {
-    id: 7,
     icon: <SiNodeDotJs />,
     color: '#73AF5A',
     category: 'Back-end',
@@ -80,7 +69,7 @@ const skills = [
     level: 1,
   },
   {
-    id: 8,
+    id: 7,
     icon: <SiAmazon />,
     color: '#FCAD24',
     category: 'Cloud',
@@ -88,15 +77,15 @@ const skills = [
     level: 3,
   },
   {
-    id: 9,
-    icon: <SiMysql />,
+    id: 8,
+    icon: <FaDatabase />,
     color: '#43759B',
     category: 'Database',
-    name: 'MySql',
+    name: 'MSSQL',
     level: 4,
   },
   {
-    id: 10,
+    id: 9,
     icon: <SiMongodb />,
     color: '#489242',
     category: 'Database',
@@ -104,7 +93,7 @@ const skills = [
     level: 2,
   },
   {
-    id: 11,
+    id: 10,
     icon: <SiGit />,
     color: '#E94F31',
     category: 'Etc',

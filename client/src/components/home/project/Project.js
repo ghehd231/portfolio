@@ -6,7 +6,7 @@ const Project = ({ item }) => {
   return (
     <ProjectItem>
       <ImageBox>
-        <img src={item.image} alt="project thumbnail" />
+        <img src={`../images/project/${item.thumbnail}.png`} alt="project thumbnail" />
       </ImageBox>
       <Title>
         {item.title}
