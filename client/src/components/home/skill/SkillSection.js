@@ -14,7 +14,7 @@ import {
 } from 'react-icons/si';
 import { FaDatabase } from 'react-icons/fa';
 const SkillSection = () => {
-  return <Section title="Skills" component={Skill} content={skills} />;
+  return <Section title="Skills" scroll component={Skill} content={skills} />;
 };
 
 const skills = [

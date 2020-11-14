@@ -3,7 +3,9 @@ import styled, { css } from 'styled-components';
 import palette from '../../lib/styles/palette';
 import Button from './Button';
 import List from './List';
-const Section = ({ title, categories, sub, vertical, component: Component, content }) => {
+import ListScroll from './ListScroll';
+
+const Section = ({ title, scroll, sub, vertical, component: Component, content }) => {
   return (
     <SectionWrap>
       <SectionBlock sub={sub}>
@@ -11,26 +13,20 @@ const Section = ({ title, categories, sub, vertical, component: Component, conte
           <Title sub={sub}>
             {title}
           </Title>
-          {categories &&
-            <Categories>
-              {categories.map(category => <Category key={category.id} category={category} />)}
-            </Categories>}
         </SectionTitleBox>
-        <List content={content} component={Component} vertical={vertical} />
+        {scroll
+          ? <ListScroll
+              content={content}
+              scroll={scroll}
+              component={Component}
+              vertical={vertical}
+            />
+          : <List content={content} component={Component} vertical={vertical} />}
       </SectionBlock>
     </SectionWrap>
   );
 };
 
-const Category = ({ category }) => {
-  return (
-    <CategoryItem>
-      <Button category>
-        {category.category}
-      </Button>
-    </CategoryItem>
-  );
-};
 const SectionWrap = styled.section`
   width: 100%;
   background: ${palette.black};
@@ -73,16 +69,6 @@ const Title = styled.div`
     css`
       font-size: 1.8rem;
     `};
-`;
-
-const Categories = styled.div`
-  display: flex;
-  align-items: center;
-`;
-const CategoryItem = styled.div`
-  & + & {
-    margin-left: 0.5rem;
-  }
 `;
 
 export default Section;
