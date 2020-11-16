@@ -5,7 +5,7 @@ import palette from '../../../lib/styles/palette';
 
 const Project = ({ item }) => {
   return (
-    <ProjectItem to={`/detail:${item.id}`}>
+    <ProjectItem to={`/detail/:${item.id}`}>
       <ImageBox>
         <img src={`../images/project/thumb/${item.thumbnail}.png`} alt="project thumbnail" />
       </ImageBox>
