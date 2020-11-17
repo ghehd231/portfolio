@@ -8,7 +8,7 @@ const Button = props => {
     ? <StyledLink {...props}>
         {props.children}
       </StyledLink>
-    : <StyledButton {...props} />;
+    : <StyledButton {...props} disabled={props.disabled} />;
 };
 
 const buttonStyle = css`
@@ -22,10 +22,17 @@ const buttonStyle = css`
   padding: 0.5rem 1rem;
   transition: all 0.2s ease-in;
   color: ${palette.white};
-  cursor: pointer;
+  cursor: ${props => (props.disable ? 'disable' : 'pointer')};
+  font-size: ${props => (props.mini ? '.8rem' : '1rem')};
+  ${props => props.mini && 'height:2rem'};
+  ${props => props.marginleft && 'margin-left:.5rem'};
+
   &:hover {
-    background: ${palette.white};
-    color: ${palette.black};
+    ${props =>
+      props.disable
+        ? ''
+        : `background: ${palette.white};
+    color: ${palette.black};`}
   }
   ${props =>
     props.category &&
@@ -39,7 +46,12 @@ const buttonStyle = css`
     margin-left: 1rem;
   }
   & > svg {
-    margin-left: 0.3rem;
+    ${props => (props.iconright ? 'margin-right' : 'margin-left')}:0.3rem;
+  }
+
+  &:disabled {
+    border-color: ${palette.gray};
+    color: ${palette.text_gray};
   }
 `;
 

@@ -21,6 +21,8 @@ const inintialProjects = [
     desc: '점심시간의 음식 선택의 고민을 줄여주기 위해 현제 위치를 기반하여 맛집을 검색해 추천해주는 사이트',
     thumbnail: 'foodwar-thumb',
     image: ['foodwar01', 'foodwar02', 'foodwar03', 'foodwar04', 'foodwar05'],
+    demo: 'https://foodwar.kro.kr',
+    github: 'https://github.com/food-war/foodwar',
   },
   {
     id: 2,
@@ -31,6 +33,8 @@ const inintialProjects = [
     desc: '프로젝트 소개~~~',
     thumbnail: 'portfolio',
     image: ['portfolio01', 'portfolio02', 'portfolio03', 'portfolio04', 'portfolio05'],
+    demo: '/',
+    github: 'https://github.com/ghehd231/portfolio',
   },
   {
     id: 3,
@@ -41,6 +45,8 @@ const inintialProjects = [
     desc: '프로젝트 소개~~~',
     thumbnail: 'franken-alience',
     image: ['alience01', 'alience02', 'alience03', 'alience04', 'alience05'],
+    demo:
+      'http://admin.frankenmono.com/hd_test/alliance_styleShare.asp?start_year=2020&start_month=2',
   },
 ];
 
@@ -53,6 +59,8 @@ function projectReducer(state, action) {
   switch (action.type) {
     case 'GET':
       return state.filter(project => project.id === action.id);
+    case 'FILTER':
+      return state.filter(project => project.category === action.category);
     default:
       throw new Error(`Unhandled action type: ${action.type}`);
   }
