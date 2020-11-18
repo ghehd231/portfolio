@@ -16,5 +16,6 @@ const Wrap = styled.div`
   display: flex;
   align-items: center;
   flex-direction: ${props => props.direction};
+  overflow: hidden;
 `;
 export default DetailWrap;

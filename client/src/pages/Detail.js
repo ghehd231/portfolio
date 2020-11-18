@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import { useProjectState } from '../contexts/projects';
 import Summary from '../components/detail/Summary';
-import Content from '../components/detail/Content';
+
+import ContentSection from '../components/detail/ContentSection';
+
 const Detail = () => {
   const { projectId } = useParams();
   const projectState = useProjectState();
@@ -13,7 +15,7 @@ const Detail = () => {
   return (
     <DetailContainer>
       <Summary project={project} />
-      <Content project={project} />
+      <ContentSection project={project} />
     </DetailContainer>
   );
 };
