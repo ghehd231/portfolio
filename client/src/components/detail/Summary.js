@@ -43,6 +43,14 @@ const Summary = ({ project }) => {
                 demo
               </Button>}
             <Button
+              to={
+                project.github
+                  ? {
+                      pathname: project.github,
+                    }
+                  : ''
+              }
+              target="_blank"
               iconright="true"
               mini="true"
               marginleft="true"
@@ -67,6 +75,8 @@ const SummaryContainer = styled.section`
 `;
 const ImgBox = styled.div`
   width: 15rem;
+  height: 100%;
+  overflow: hidden;
   & > img {
     width: 100%;
   }

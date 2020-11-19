@@ -12,7 +12,8 @@ const Wrap = styled.div`
   width: 100%;
   max-width: 70rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
+  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: ${props => props.direction};

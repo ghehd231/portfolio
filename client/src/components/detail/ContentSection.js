@@ -5,14 +5,13 @@ import DetailWrap from '../common/DetailWrap';
 import StackItem from '../common/StackItem';
 
 const ContentSection = ({ project }) => {
-  console.log(project);
   return (
     <ContentContainer>
       <DetailWrap direction="column">
         <SubSection>
           <ImgList>
             {project.image.map((img, i) =>
-              <img key={i} src="../images/main-bg4.jpg" alt="project" />,
+              <img key={i} src={`../images/project/${img}.png`} alt="project" />,
             )}
           </ImgList>
         </SubSection>
@@ -54,7 +53,7 @@ const SubSection = styled.div`
 const ImgList = styled.div`
   display: flex;
   overflow-x: auto;
-  height: 20rem;
+  height: 25rem;
   padding-bottom: 1rem;
 
   &::-webkit-scrollbar {

@@ -14,7 +14,7 @@ const Stack = styled.span`
   border: 1px solid ${palette.gray};
   border-radius: 4px;
   padding: 0.1rem 0.3rem;
-  margin: 0.2rem;
+  margin: 0 0.2rem 0.2rem 0;
   word-break: break-all;
   background: ${palette.button.bgDarkGray};
   color: ${palette.button.red};
