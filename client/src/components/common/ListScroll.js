@@ -61,13 +61,16 @@ const MoveButton = styled.button`
   border: 0;
   position: absolute;
   font-size: 1.5rem;
-  right: -1.5rem;
+  right: -0.1rem;
   ${props =>
     props.left &&
     css`
       right: unset;
-      left: -1.5rem;
+      left: -0.1rem;
     `};
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
 `;
 
 const SkillListBlock = styled.div`
@@ -82,7 +85,18 @@ const SkillListBlock = styled.div`
   &::-webkit-scrollbar {
     visibility: hidden;
   }
-
+  @media only screen and (max-width: 1200px) {
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+    }
+  }
   ${props =>
     props.scroll &&
     css`

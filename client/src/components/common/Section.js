@@ -45,6 +45,9 @@ const SectionBlock = styled.section`
     css`
       padding: 2rem 1rem;
     `};
+  @media only screen and (max-width: 480px) {
+    padding: 2rem 1rem;
+  }
 `;
 
 const SectionTitleBox = styled.div`
@@ -57,6 +60,9 @@ const SectionTitleBox = styled.div`
     css`
       margin-bottom: 0.5rem;
     `};
+  @media only screen and (max-width: 480px) {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const Title = styled.div`
@@ -69,6 +75,10 @@ const Title = styled.div`
     css`
       font-size: 1.8rem;
     `};
+  @media only screen and (max-width: 480px) {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
 `;
 
 export default Section;

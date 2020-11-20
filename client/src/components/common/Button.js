@@ -53,6 +53,10 @@ const buttonStyle = css`
     border-color: ${palette.gray};
     color: ${palette.text_gray};
   }
+
+  @media only screen and (max-width: 480px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const StyledLink = styled(Link)`
