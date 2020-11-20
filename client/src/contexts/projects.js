@@ -24,6 +24,7 @@ const inintialProjects = [
     image: ['foodwar01', 'foodwar02', 'foodwar03', 'foodwar04', 'foodwar05', 'foodwar06'],
     demo: 'https://foodwar.kro.kr',
     github: 'https://github.com/food-war/foodwar',
+    notion: 'https://www.notion.so/ghehd231/Foodwar-d6025c64483540c1a8c40d73ffff55b9',
   },
   {
     id: 2,

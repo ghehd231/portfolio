@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 import { RiArrowGoBackLine } from 'react-icons/ri';
 import { AiOutlinePlaySquare } from 'react-icons/ai';
 import { FaGithub } from 'react-icons/fa';
+import { SiNotion } from 'react-icons/si';
 const Summary = ({ project }) => {
   const history = useHistory();
   const goBack = () => {
@@ -41,6 +42,17 @@ const Summary = ({ project }) => {
               >
                 <AiOutlinePlaySquare />
                 demo
+              </Button>}
+            {project.notion &&
+              <Button
+                to={{ pathname: project.notion }}
+                target="_blank"
+                iconright="true"
+                mini="true"
+                marginleft="true"
+              >
+                <SiNotion />
+                Notion
               </Button>}
             <Button
               to={
