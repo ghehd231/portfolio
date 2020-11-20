@@ -5,7 +5,7 @@ import Project from './Project';
 
 const ProjectSection = () => {
   const state = useProjectState();
-  return <Section title="Projects" component={Project} content={state} />;
+  return <Section title="Projects" scroll component={Project} content={state} />;
 };
 
 export default ProjectSection;

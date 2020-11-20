@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const BgSection = ({ bgName, children }) => {
+const BgSection = ({ bgName, column, children }) => {
   return (
     <>
       <Bg bgName={bgName} />
       <MainBolok>
         <GradientBox>
-          <MainWrap>{children}</MainWrap>
+          <MainWrap column={column}>{children}</MainWrap>
         </GradientBox>
       </MainBolok>
     </>
@@ -61,6 +61,10 @@ const MainWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: 480px) {
+    ${(props) =>
+     props.column && "flex-direction:column;  align-items: flex-start;"};
+    }
 `;
 
 

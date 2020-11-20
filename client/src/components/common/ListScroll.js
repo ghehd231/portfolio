@@ -75,6 +75,7 @@ const MoveButton = styled.button`
 
 const SkillListBlock = styled.div`
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   ${props =>
     props.vertical &&

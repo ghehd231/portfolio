@@ -7,7 +7,7 @@ import { FaBars, FaGithub } from 'react-icons/fa';
 
 const Head = () => {
   return (
-    <BgSection bgName="main-bg4">
+    <BgSection bgName="main-bg4" column>
       <div>
         <Title>About</Title>
       </div>
