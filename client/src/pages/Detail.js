@@ -25,5 +25,8 @@ const DetailContainer = styled.div`
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  @media only screen and (max-width: 600px) {
+    overflow: auto;
+  }
 `;
 export default Detail;

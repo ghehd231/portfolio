@@ -18,6 +18,7 @@ const buttonStyle = css`
   align-self: center;
   background: transparent;
   border: 1px solid ${palette.white};
+  
   border-radius: 2px;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease-in;
@@ -42,9 +43,10 @@ const buttonStyle = css`
       color: ${palette.text_gray};
     `}
 
-    &+& {
-    margin-left: 1rem;
+  &+& {
+    /* margin-left: 1rem; */
   }
+  
   & > svg {
     ${props => (props.iconright ? 'margin-right' : 'margin-left')}:0.3rem;
   }
@@ -56,6 +58,7 @@ const buttonStyle = css`
 
   @media only screen and (max-width: 480px) {
     font-size: 0.8rem;
+    ${props => props.mini && ' padding: 0.2rem 0.5rem;'};
   }
 `;
 

@@ -38,15 +38,25 @@ const ContentContainer = styled.section`
   display: flex;
   align-items: center;
   flex: 1;
-  overflow-y: auto;
 `;
 
 const SubSection = styled.div`
   width: 100%;
   color: ${palette.white};
+  font-size: 1rem;
   flex: 2;
   & + & {
     flex: 1;
+  }
+  @media only screen and (max-width: 450px) {
+    font-size: 0.8rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+    @media only screen and (max-width: 450px) {
+      font-size: 1.3rem;
+    }
   }
 `;
 
@@ -66,6 +76,9 @@ const ImgList = styled.div`
   &::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
+  }
+  @media only screen and (max-width: 450px) {
+    height: 15rem;
   }
   img {
     height: 100%;
