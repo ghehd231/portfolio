@@ -18,13 +18,12 @@ const Project = ({ item }) => {
           {item.title}
         </Title>
         <SubText>
-          <StackContainer>
-            {item.stack.map((stack, index) => <StackItem key={index} stack={stack} />)}
-          </StackContainer>
-        </SubText>
-        <SubText>
           {item.summary}
         </SubText>
+
+        <StackContainer>
+          {item.stack.map((stack, index) => <StackItem key={index} stack={stack} />)}
+        </StackContainer>
       </MetaBox>
     </ProjectItem>
   );
@@ -34,30 +33,28 @@ const ProjectItem = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 24%;
+  width: calc(100% / 4);
   color: ${palette.white};
   cursor: pointer;
   padding: 1rem;
-  & + & {
-    margin-left: 0.5rem;
-    @media only screen and (max-width: 600px) {
-      margin-left: 0;
-    }
-  }
+  
   @media only screen and (max-width: 1200px) {
-    width: 32%;
+    /* width: 32%; */
+    width: calc(100% / 3);
   }
   @media only screen and (max-width: 850px) {
-    width: 48%;
+    /* width: 48%; */
+    width: calc(100% / 2);
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
     flex-direction: row;
     padding: 1rem 0;
-    height: 12rem;
+    height: 11rem;
     margin-left: 0;
+    
   }
-  }
+  
   
 `;
 
@@ -67,13 +64,13 @@ const ImageBox = styled.div`
   height: 10rem;
   border-radius: 10px;
   overflow: hidden;
-  & > img {
+  /* & > img {
     width: 100%;
     height: 100%;
     min-width: 210px;
     min-height: 140px;
-  }
-  background: ${props => `url("../images/project/thumb/${props.img}.png")`};
+  } */
+  background: ${props => `url("${props.img}")`};
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -120,7 +117,6 @@ const SubText = styled.span`
 const StackContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  white-space: nowrap;
 `;
 
 export default Project;

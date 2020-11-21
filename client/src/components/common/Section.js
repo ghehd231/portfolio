@@ -1,11 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import palette from '../../lib/styles/palette';
-import Button from './Button';
-import List from './List';
 import ListScroll from './ListScroll';
 
-const Section = ({ title, scroll, sub, vertical, component: Component, content }) => {
+const Section = ({ title, sub, scroll, vertical, component: Component, content }) => {
   return (
     <SectionWrap>
       <SectionBlock sub={sub}>
@@ -14,14 +12,7 @@ const Section = ({ title, scroll, sub, vertical, component: Component, content }
             {title}
           </Title>
         </SectionTitleBox>
-        {scroll
-          ? <ListScroll
-              content={content}
-              scroll={scroll}
-              component={Component}
-              vertical={vertical}
-            />
-          : <List content={content} component={Component} vertical={vertical} />}
+        <ListScroll scroll={scroll} content={content} component={Component} vertical={vertical} />
       </SectionBlock>
     </SectionWrap>
   );
@@ -32,7 +23,8 @@ const SectionWrap = styled.section`
   background: ${palette.black};
   z-index: 100;
 `;
-const SectionBlock = styled.section`
+
+const SectionBlock = styled.div`
   position: relative;
   padding: 3rem 1rem;
   max-width: 70rem;
@@ -44,8 +36,7 @@ const SectionBlock = styled.section`
     props.sub &&
     css`
       padding: 2rem 1rem;
-    `};
-  @media only screen and (max-width: 480px) {
+    `} @media only screen and (max-width: 480px) {
     padding: 2rem 1rem;
   }
 `;
@@ -59,9 +50,8 @@ const SectionTitleBox = styled.div`
     props.sub &&
     css`
       margin-bottom: 0.5rem;
-    `};
-  @media only screen and (max-width: 480px) {
-    margin-bottom: 1rem;
+    `} @media only screen and (max-width: 480px) {
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -74,8 +64,7 @@ const Title = styled.div`
     props.sub &&
     css`
       font-size: 1.8rem;
-    `};
-  @media only screen and (max-width: 480px) {
+    `} @media only screen and (max-width: 480px) {
     font-size: 1.8rem;
     margin-bottom: 0;
   }

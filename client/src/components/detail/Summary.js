@@ -17,7 +17,7 @@ const Summary = ({ project }) => {
     <SummaryContainer>
       <DetailWrap direction="row">
         <ImgBox>
-          <img src={`../images/project/thumb/${project.thumbnail}.png`} />
+          <img src={`${project.thumbnail}`} />
         </ImgBox>
         <DescBox>
           <Title>
@@ -80,7 +80,7 @@ const Summary = ({ project }) => {
 
 const SummaryContainer = styled.section`
   width: 100%;
-  height: 25%;
+  height: 23%;
   display: flex;
   border-bottom: 1px solid ${palette.gray};
   color: ${palette.white};
