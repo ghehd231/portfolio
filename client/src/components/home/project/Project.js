@@ -117,6 +117,13 @@ const SubText = styled.span`
 const StackContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media only screen and (max-width: 480px) {
+    max-height: 9vh;
+    overflow: scroll;
+    /* &::-webkit-scrollbar {
+      width: 0px;
+    } */
+  }
 `;
 
 export default Project;
