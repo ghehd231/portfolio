@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 import DetailWrap from '../common/DetailWrap';
 import StackItem from '../common/StackItem';
 
 const ContentSection = ({ project }) => {
+  const [windowHeight, reWindowHeight] = useState(window.innerHeight);
+
+  useEffect(
+    () => {
+      // resizeWindow();
+      window.addEventListener('resize', resizeWindow);
+      return () => window.removeEventListener('resize', resizeWindow);
+    },
+    [windowHeight],
+  );
+
+  const resizeWindow = () => {
+    reWindowHeight(window.innerHeight);
+  };
   return (
     <ContentContainer>
       <DetailWrap direction="column">
         <SubSection>
-          <ImgList>
+          <ImgList height={windowHeight}>
             {project.image.map((img, i) =>
               <img key={i} src={`../images/project/${img}.png`} alt="project" />,
             )}
@@ -66,6 +80,7 @@ const ImgList = styled.div`
   height: 25rem;
   padding-bottom: 1rem;
 
+  ${({ height }) => `max-height: ${Math.floor(height / 5) * 2 + 50}px;`};
   &::-webkit-scrollbar {
     width: 4px;
     height: 4px;

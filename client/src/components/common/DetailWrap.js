@@ -12,7 +12,7 @@ const Wrap = styled.div`
   width: 100%;
   max-width: 70rem;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 2rem;
 
   height: 100%;
   display: flex;

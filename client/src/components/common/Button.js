@@ -8,7 +8,7 @@ const Button = props => {
     ? <StyledLink {...props}>
         {props.children}
       </StyledLink>
-    : <StyledButton {...props} disabled={props.disabled} />;
+    : <StyledButton {...props} disabled={props.disable} />;
 };
 
 const buttonStyle = css`
@@ -18,7 +18,6 @@ const buttonStyle = css`
   align-self: center;
   background: transparent;
   border: 1px solid ${palette.white};
-  
   border-radius: 2px;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease-in;
@@ -44,7 +43,7 @@ const buttonStyle = css`
     `}
 
   &+& {
-    /* margin-left: 1rem; */
+    margin-left: 1rem;
   }
   
   & > svg {
