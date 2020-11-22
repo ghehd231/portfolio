@@ -86,7 +86,9 @@ const ImgList = styled.div`
     } else {
       return `max-height: ${Math.floor(height / 5) * 2 + 50}px;`;
     }
-  }} &::-webkit-scrollbar {
+  }};
+
+  &::-webkit-scrollbar {
     width: 4px;
     height: 4px;
     background: ${palette.gray};

@@ -84,18 +84,20 @@ const SkillListBlock = styled.div`
     `} overflow-x: auto;
   padding-bottom: 1rem;
   &::-webkit-scrollbar {
-    visibility: hidden;
+    /* visibility: hidden; */
+    width: 0px;
   }
   @media only screen and (max-width: 1200px) {
     &::-webkit-scrollbar {
-      width: 4px;
+      /* width: 4px;
       height: 4px;
       border-radius: 6px;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.2); */
+      width: 0px;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: rgba(255, 255, 255, 0.3);
-      border-radius: 6px;
+      /* background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 6px; */
     }
   }
   ${props =>
