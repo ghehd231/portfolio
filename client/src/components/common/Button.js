@@ -43,7 +43,7 @@ const buttonStyle = css`
     `}
 
   &+& {
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
   }
   
   & > svg {
