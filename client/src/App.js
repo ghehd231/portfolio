@@ -6,7 +6,7 @@ import { About, Detail, Home } from './pages';
 function App() {
   return (
     <ProjectProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio">
         <Switch>
           <Route exact path="/">
             <Home />

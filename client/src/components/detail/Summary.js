@@ -17,7 +17,7 @@ const Summary = ({ project }) => {
     <SummaryContainer>
       <DetailWrap direction="row">
         <ImgBox>
-          <img src={`${project.thumbnail}`} />
+          <img src={`../${project.thumbnail}`} />
         </ImgBox>
         <DescBox>
           <Title>
