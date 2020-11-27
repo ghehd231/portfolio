@@ -79,7 +79,7 @@ const ImgList = styled.div`
   overflow-x: auto;
   height: 25rem;
   padding-bottom: 1rem;
-
+  min-height: 100px;
   ${({ height }) => {
     if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
       return `max-height: ${Math.floor(height / 5) * 2 - 50}px;`;

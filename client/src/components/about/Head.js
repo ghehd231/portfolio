@@ -68,7 +68,7 @@ const links = [
   {
     id: 2,
     name: 'Github',
-    path: 'https://github.com/ghehd231',
+    path: 'https://github.com/ghehd231/portfolio',
     icon: <FaGithub />,
   },
 ];

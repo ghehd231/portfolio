@@ -21,6 +21,7 @@ const Wrap = styled.div`
   overflow: hidden;
   @media only screen and (max-width: 600px) {
     padding: 2rem 1rem;
+    overflow-y: scroll;
   }
 `;
 export default DetailWrap;

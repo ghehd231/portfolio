@@ -89,6 +89,7 @@ const SummaryContainer = styled.section`
   }
   @media only screen and (max-width: 600px) {
     height: 15%;
+    min-height: 10rem;
   }
   @media only screen and (max-width: 450px) {
     height: unset;
