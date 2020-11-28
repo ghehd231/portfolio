@@ -58,4 +58,4 @@ const MetaDesc = styled.p`
   }
 `;
 
-export default Experience;
+export default React.memo(Experience);

@@ -70,4 +70,4 @@ const Title = styled.div`
   }
 `;
 
-export default Section;
+export default React.memo(Section);

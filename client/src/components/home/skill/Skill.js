@@ -86,4 +86,4 @@ const Level = styled.div`
     font-size: 0.7rem;
   }
 `;
-export default Skill;
+export default React.memo(Skill);

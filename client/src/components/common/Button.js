@@ -66,4 +66,4 @@ const StyledLink = styled(Link)`
 `;
 const StyledButton = styled.button`${buttonStyle};`;
 
-export default Button;
+export default React.memo(Button);

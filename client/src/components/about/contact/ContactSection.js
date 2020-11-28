@@ -12,4 +12,4 @@ const contacts = [
     Email: 'ghehd231@naver.com',
   },
 ];
-export default ContactSection;
+export default React.memo(ContactSection);

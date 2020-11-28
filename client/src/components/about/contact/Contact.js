@@ -59,4 +59,4 @@ const MetaEmail = styled.div`
     margin-right: 0.3rem;
   }
 `;
-export default Contact;
+export default React.memo(Contact);

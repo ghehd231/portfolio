@@ -113,4 +113,4 @@ const StackWrap = styled.div`
   white-space: nowrap;
 `;
 
-export default ContentSection;
+export default React.memo(ContentSection);

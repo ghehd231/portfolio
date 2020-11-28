@@ -24,4 +24,4 @@ const Wrap = styled.div`
     overflow-y: scroll;
   }
 `;
-export default DetailWrap;
+export default React.memo(DetailWrap);

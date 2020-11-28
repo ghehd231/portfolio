@@ -15,4 +15,4 @@ const certifications = [
   },
 ];
 
-export default CertificationSection;
+export default React.memo(CertificationSection);

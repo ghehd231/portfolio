@@ -20,4 +20,4 @@ const Stack = styled.span`
   color: ${palette.button.red};
   font-size: 0.8rem;
 `;
-export default StackItem;
+export default React.memo(StackItem);

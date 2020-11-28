@@ -77,4 +77,4 @@ const MetaDesc = styled.p`
   }
 `;
 
-export default Certification;
+export default React.memo(Certification);

@@ -131,4 +131,4 @@ const Title = styled.h1`
   }
 `;
 const LinkBox = styled.div`display: flex;`;
-export default Summary;
+export default React.memo(Summary);

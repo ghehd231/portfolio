@@ -8,4 +8,4 @@ const ProjectSection = () => {
   return <Section title="Projects" component={Project} content={state} />;
 };
 
-export default ProjectSection;
+export default React.memo(ProjectSection);
