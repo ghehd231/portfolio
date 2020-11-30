@@ -4,11 +4,17 @@ import styled, { css } from 'styled-components';
 import palette from '../../lib/styles/palette';
 
 const Button = props => {
-  return props.to
-    ? <StyledLink {...props}>
-        {props.children}
-      </StyledLink>
-    : <StyledButton {...props} disabled={props.disable} />;
+  if (props.to) {
+    return props.target
+      ? <StyledA href={props.to.pathname} {...props} disabled={props.disable}>
+          {props.children}
+        </StyledA>
+      : <StyledLink {...props}>
+          {props.children}
+        </StyledLink>;
+  } else {
+    return <StyledButton {...props} disabled={props.disable} />;
+  }
 };
 
 const buttonStyle = css`
@@ -66,4 +72,5 @@ const StyledLink = styled(Link)`
 `;
 const StyledButton = styled.button`${buttonStyle};`;
 
+const StyledA = styled.a`${buttonStyle};`;
 export default React.memo(Button);
