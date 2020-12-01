@@ -36,7 +36,7 @@ const inintialProjects = [
     desc: '자기소개 및 프로젝트 경험을 보여주는 페이지',
     thumbnail: 'images/project/thumb/portfolio.png',
     image: ['portfolio01', 'portfolio02', 'portfolio05', 'portfolio03', 'portfolio04'],
-    demo: '/',
+    demo: '/portfolio',
     github: 'https://github.com/ghehd231/portfolio',
   },
   {
